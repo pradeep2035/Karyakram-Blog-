@@ -258,7 +258,7 @@ class _EventPageDetailState extends State<EventPageDetail> {
           child: Container(),
         ),
         Container(
-          height: 65,
+          height: 55,
           child: Image.asset(
             "assets/Button- Color.png",
             width: 271,

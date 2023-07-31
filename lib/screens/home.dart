@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
           ],
           elevation: 0,
         ),
- // ------------------------------BODY--------------------------------------------------       
+        // ------------------------------BODY--------------------------------------------------
         body: homeProvider.isLoading
             ? const Center(
                 child: CircularProgressIndicator(
@@ -80,7 +80,8 @@ class _HomePageState extends State<HomePage> {
                       homeProvider.dataModel.content!.data![index].dateTime!);
                   return Padding(
                     padding: const EdgeInsets.only(top: 8, left: 16, right: 16),
-                    child: GestureDetector(                                   // Navigting to event_details page with passing arguments 
+                    child: GestureDetector(
+                      // Navigting to event_details page with passing arguments
                       onTap: () {
                         Navigator.push(
                             context,
@@ -113,8 +114,9 @@ class _HomePageState extends State<HomePage> {
                                       venue_city: homeProvider.dataModel
                                           .content!.data![index].venueCity
                                           .toString(),
-                                    )));},
-//-----------------------------------CONTAINER DESIGN----------------------------------------------                     
+                                    )));
+                      },
+//-----------------------------------CONTAINER DESIGN----------------------------------------------
                       child: Container(
                           width: 327,
                           height: 106,
@@ -130,7 +132,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ],
                           ),
-//----------------------------------BANNER - IMAGE------------------------------------------------                          
+//----------------------------------BANNER - IMAGE------------------------------------------------
                           child: Row(
                             children: [
                               Padding(
@@ -146,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                               ),
-//-------------------------------------- DATE-TIME---------------------------------------------                              
+//-------------------------------------- DATE-TIME---------------------------------------------
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Column(
@@ -177,9 +179,9 @@ class _HomePageState extends State<HomePage> {
                                       ],
                                     ),
                                     const SizedBox(
-                                      height: 15,
+                                      height: 13,
                                     ),
-//--------------------------------------------TITLE--------------------------------------------------                                    
+//--------------------------------------------TITLE--------------------------------------------------
                                     Text(
                                       homeProvider.dataModel.content!
                                           .data![index].title!,
@@ -189,9 +191,9 @@ class _HomePageState extends State<HomePage> {
                                           color: const Color(0xFF120D26)),
                                     ),
                                     const SizedBox(
-                                      height: 16,
+                                      height: 12,
                                     ),
-//--------------------------------------------lOCATION----------------------------------------------------------                                    
+//--------------------------------------------lOCATION----------------------------------------------------------
                                     Row(children: [
                                       Image.asset(
                                         'assets/location.png',
